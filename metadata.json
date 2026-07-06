@@ -1,0 +1,6 @@
+{
+  "name": "ProFlow Workspace",
+  "description": "A sleek project management dashboard.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
