@@ -35,8 +35,13 @@ axios.interceptors.response.use(
   (response) => response,
   async (error) => {
     const originalRequest = error.config;
-    // Only attempt refresh on 401 Unauthorized, and only once per request
-    if (error.response?.status === 401 && !originalRequest._retry) {
+    // Only attempt refresh on 401 Unauthorized, and only once per request, and not for refresh-token or login requests
+    if (
+      error.response?.status === 401 && 
+      !originalRequest._retry && 
+      !originalRequest.url?.includes('/auth/refresh-token') &&
+      !originalRequest.url?.includes('/auth/login')
+    ) {
       if (isRefreshing) {
         // Queue requests that come in while a refresh is already in flight
         return new Promise((resolve, reject) => {
