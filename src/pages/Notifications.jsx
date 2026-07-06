@@ -292,7 +292,7 @@ const Notifications = memo(function Notifications() {
                       </div>
 
                       {/* Content */}
-                      <div className="flex-1 min-w-0 pr-0 sm:pr-8">
+                      <div className="flex-1 min-w-0 pr-0 sm:pr-24">
                         <div className="flex items-center gap-2 flex-wrap mb-1">
                           <span className="font-bold text-sm text-slate-900 dark:text-white group-hover:text-indigo-650 dark:group-hover:text-indigo-400 transition-colors">{n.title}</span>
                           <span className={`text-[9px] font-extrabold uppercase tracking-wider px-2 py-0.5 rounded-full ${cfg.bg} ${cfg.text} border border-slate-100/30 dark:border-slate-800`}>
